@@ -1,0 +1,24 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: CATALOGUESERVICE
+    h2:
+      console:
+        enabled: 'true'
+    datasource:
+      username: sa
+      url: jdbc:h2:mem:testdb
+      driverClassName: org.h2.Driver
+      password: password
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceURL:
+      defaultZone: http://localhost:8088/eureka
+    instance:
+      hostname: localhost
+

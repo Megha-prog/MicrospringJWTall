@@ -1,0 +1,26 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: ORDER-SERVICE
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8088/eureka/
+    instance:
+      hostname: localhost
+logging:
+    file: C:/Users/JGD/OneDrive/Desktop/logs/microservice.log

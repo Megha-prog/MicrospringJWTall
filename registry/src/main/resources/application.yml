@@ -1,0 +1,7 @@
+eureka:
+  client:
+    register-with-eureka:
+      fetch-registry: false
+server:
+  port: 8088
+
